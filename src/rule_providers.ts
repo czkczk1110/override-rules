@@ -106,4 +106,12 @@ export const ruleProviders: Record<string, RuleProvider> = {
         url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
         path: "./ruleset/GFWList.yaml",
     },
+    WIKIPEDIA: {
+        type: "http",
+        behavior: "classical",
+        format: "text",
+        interval: 86400,
+        url: `${CDN_URL}/gh/czkczk1110/override-rules@main/ruleset/Wikipedia.list`,
+        path: "./ruleset/Wikipedia.list",
+    },
 };

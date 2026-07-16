@@ -174,6 +174,12 @@ export function buildProxyGroups({
             proxies: defaultProxies,
         },
         {
+            name: PROXY_GROUPS.WIKIPEDIA,
+            icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Wikipedia.png`,
+            type: "select",
+            proxies: defaultProxies,
+        },
+        {
             name: PROXY_GROUPS.TWITCH,
             icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Twitch.png`,
             type: "select",

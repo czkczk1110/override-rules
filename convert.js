@@ -302,6 +302,7 @@ https://github.com/powerfullz/override-rules
     defaultFallback,
     frontProxySelector
   }) {
+    console.log("buildProxyGroups called");
     const hasTW = countryNames.includes("台湾");
     const hasHK = countryNames.includes("香港");
     const hasUS = countryNames.includes("美国");
@@ -485,7 +486,7 @@ https://github.com/powerfullz/override-rules
         name: PROXY_GROUPS.FINAL,
         icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Final.png`,
         type: "select",
-        proxies: [PROXY_GROUPS.SELECT, "DIRECT"]
+        proxies: [PROXY_GROUPS.SELECT, PROXY_GROUPS.MANUAL, "DIRECT"]
       },
       {
         name: PROXY_GROUPS.AUTO,

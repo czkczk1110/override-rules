@@ -302,7 +302,6 @@ https://github.com/powerfullz/override-rules
     defaultFallback,
     frontProxySelector
   }) {
-    console.log("buildProxyGroups called");
     const hasTW = countryNames.includes("台湾");
     const hasHK = countryNames.includes("香港");
     const hasUS = countryNames.includes("美国");
@@ -756,14 +755,6 @@ https://github.com/powerfullz/override-rules
           url: `${CDN_URL}/gh/powerfullz/override-rules@master/ruleset/Weibo.list`,
           path: "./ruleset/Weibo.list"
         },
-        GFWList: {
-          type: "http",
-          behavior: "domain",
-          format: "yaml",
-          interval: 86400,
-          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
-          path: "./ruleset/GFWList.yaml"
-        },
         WIKIPEDIA: {
           type: "http",
           behavior: "classical",
@@ -771,6 +762,14 @@ https://github.com/powerfullz/override-rules
           interval: 86400,
           url: `${CDN_URL}/gh/czkczk1110/override-rules@main/ruleset/Wikipedia.list`,
           path: "./ruleset/Wikipedia.list"
+        },
+        GFWList: {
+          type: "http",
+          behavior: "domain",
+          format: "yaml",
+          interval: 86400,
+          url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
+          path: "./ruleset/GFWList.yaml"
         }
       };
     }

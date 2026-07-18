@@ -1,6 +1,7 @@
 import { PROXY_GROUPS } from "./constants";
 
 const baseRules = [
+    `RULE-SET,WIKIPEDIA,${PROXY_GROUPS.WIKIPEDIA}`,
     `DST-PORT,22,${PROXY_GROUPS.SSH}`,
     `GEOIP,private,DIRECT,no-resolve`,
     `RULE-SET,ADBlock,${PROXY_GROUPS.AD_BLOCK}`,
@@ -36,7 +37,6 @@ const baseRules = [
     `GEOSITE,google,${PROXY_GROUPS.GOOGLE}`,
     `RULE-SET,Crypto,${PROXY_GROUPS.CRYPTO}`,
     `RULE-SET,GFWList,${PROXY_GROUPS.SELECT}`,
-    `RULE-SET,WIKIPEDIA,${PROXY_GROUPS.WIKIPEDIA}`,
     `GEOIP,cn,DIRECT`,
     `MATCH,${PROXY_GROUPS.FINAL}`,
 ];

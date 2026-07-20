@@ -59,6 +59,7 @@ function buildGroupByType({
  * @param input - 构建代理组所需的输入参数（详见 BuildProxyGroupsInput）
  * @returns 代理组配置数组
  */
+
 export function buildProxyGroups({
     regexFilter,
     groupType,
@@ -73,6 +74,7 @@ export function buildProxyGroups({
     defaultFallback,
     frontProxySelector,
 }: BuildProxyGroupsInput): ProxyGroup[] {
+    console.log("buildProxyGroups called");
     const hasTW = countryNames.includes("台湾");
     const hasHK = countryNames.includes("香港");
     const hasUS = countryNames.includes("美国");
@@ -175,7 +177,7 @@ export function buildProxyGroups({
         },
         {
             name: PROXY_GROUPS.WIKIPEDIA,
-            icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Wikipedia.png`,
+            icon: `${CDN_URL}/czkczk1110/override-rules@main/icons/Wikipedia.png`,
             type: "select",
             proxies: defaultProxies,
         },
@@ -260,11 +262,12 @@ export function buildProxyGroups({
             type: "select",
             proxies: ["REJECT", "REJECT-DROP", "DIRECT"],
         },
+
         {
             name: PROXY_GROUPS.FINAL,
             icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Final.png`,
             type: "select",
-            proxies: [PROXY_GROUPS.SELECT, PROXY_GROUPS.MANUAL, "DIRECT"],
+            proxies: [PROXY_GROUPS.SELECT, PROXY_GROUPS.MANUAL, "DIRECT"]
         },
         {
             name: PROXY_GROUPS.AUTO,

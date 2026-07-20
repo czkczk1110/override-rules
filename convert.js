@@ -302,6 +302,7 @@ https://github.com/powerfullz/override-rules
     defaultFallback,
     frontProxySelector
   }) {
+    console.log("buildProxyGroups called");
     const hasTW = countryNames.includes("台湾");
     const hasHK = countryNames.includes("香港");
     const hasUS = countryNames.includes("美国");
@@ -398,7 +399,7 @@ https://github.com/powerfullz/override-rules
       },
       {
         name: PROXY_GROUPS.WIKIPEDIA,
-        icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Wikipedia.png`,
+        icon: `${CDN_URL}/czkczk1110/override-rules@main/icons/Wikipedia.png`,
         type: "select",
         proxies: defaultProxies
       },
@@ -610,7 +611,6 @@ https://github.com/powerfullz/override-rules
       "use strict";
       init_constants();
       baseRules = [
-        `RULE-SET,WIKIPEDIA,${PROXY_GROUPS.WIKIPEDIA}`,
         `DST-PORT,22,${PROXY_GROUPS.SSH}`,
         `GEOIP,private,DIRECT,no-resolve`,
         `RULE-SET,ADBlock,${PROXY_GROUPS.AD_BLOCK}`,
@@ -646,6 +646,7 @@ https://github.com/powerfullz/override-rules
         `GEOSITE,google,${PROXY_GROUPS.GOOGLE}`,
         `RULE-SET,Crypto,${PROXY_GROUPS.CRYPTO}`,
         `RULE-SET,GFWList,${PROXY_GROUPS.SELECT}`,
+        `RULE-SET,WIKIPEDIA,${PROXY_GROUPS.WIKIPEDIA}`,
         `GEOIP,cn,DIRECT`,
         `MATCH,${PROXY_GROUPS.FINAL}`
       ];
@@ -755,14 +756,6 @@ https://github.com/powerfullz/override-rules
           url: `${CDN_URL}/gh/powerfullz/override-rules@master/ruleset/Weibo.list`,
           path: "./ruleset/Weibo.list"
         },
-        WIKIPEDIA: {
-          type: "http",
-          behavior: "classical",
-          format: "text",
-          interval: 86400,
-          url: `${CDN_URL}/gh/czkczk1110/override-rules@main/ruleset/Wikipedia.list`,
-          path: "./ruleset/Wikipedia.list"
-        },
         GFWList: {
           type: "http",
           behavior: "domain",
@@ -770,6 +763,14 @@ https://github.com/powerfullz/override-rules
           interval: 86400,
           url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt",
           path: "./ruleset/GFWList.yaml"
+        },
+        WIKIPEDIA: {
+          type: "http",
+          behavior: "classical",
+          format: "text",
+          interval: 86400,
+          url: `${CDN_URL}/gh/czkczk1110/override-rules@main/ruleset/Wikipedia.list`,
+          path: "./ruleset/Wikipedia.list"
         }
       };
     }

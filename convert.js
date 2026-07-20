@@ -399,7 +399,7 @@ https://github.com/powerfullz/override-rules
       },
       {
         name: PROXY_GROUPS.WIKIPEDIA,
-        icon: `${CDN_URL}/czkczk1110/override-rules@main/icons/Wikipedia.png`,
+        icon: `${CDN_URL}/gh/czkczk1110/override-rules@main/icons/Wikipedia.png`,
         type: "select",
         proxies: defaultProxies
       },

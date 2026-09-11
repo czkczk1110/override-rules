@@ -271,7 +271,7 @@ https://github.com/powerfullz/override-rules
           icon,
           type: "url-test",
           url: SPEEDTEST_URL,
-          interval: 60,
+          interval: 15,
           tolerance: 20,
           ...nodeSource
         };
@@ -282,7 +282,7 @@ https://github.com/powerfullz/override-rules
           type: "load-balance",
           strategy: "sticky-sessions",
           url: SPEEDTEST_URL,
-          interval: 60,
+          interval: 15,
           tolerance: 20,
           ...nodeSource
         };
@@ -302,6 +302,7 @@ https://github.com/powerfullz/override-rules
     defaultFallback,
     frontProxySelector
   }) {
+    console.log("buildProxyGroups called");
     const hasTW = countryNames.includes("台湾");
     const hasHK = countryNames.includes("香港");
     const hasUS = countryNames.includes("美国");
@@ -398,7 +399,7 @@ https://github.com/powerfullz/override-rules
       },
       {
         name: PROXY_GROUPS.WIKIPEDIA,
-        icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Wikipedia.png`,
+        icon: `${CDN_URL}/gh/czkczk1110/override-rules@main/icons/Wikipedia.png`,
         type: "select",
         proxies: defaultProxies
       },
@@ -493,7 +494,7 @@ https://github.com/powerfullz/override-rules
         type: "url-test",
         url: SPEEDTEST_URL,
         proxies: defaultFallback,
-        interval: 60,
+        interval: 15,
         tolerance: 20
       },
       {
@@ -502,7 +503,7 @@ https://github.com/powerfullz/override-rules
         type: "fallback",
         url: SPEEDTEST_URL,
         proxies: defaultFallback,
-        interval: 60,
+        interval: 15,
         tolerance: 20
       },
       lowCostNodes.length > 0 || regexFilter ? buildGroupByType({

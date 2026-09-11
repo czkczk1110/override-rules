@@ -171,7 +171,7 @@ https://github.com/powerfullz/override-rules
         },
         德国: {
           weight: 70,
-          pattern: "德国|德|柏林|法兰克福|慕尼黑|Munich|\\b(?:DE|de)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Germany|GERMANY|DEU|MUC|🇩🇪",
+          pattern: "德国|德|柏林|法兰克福|慕尼黑|Munich|\\b(?:DE|de)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Germany|GERMANY|DEU|MUC|FRA|🇩🇪",
           icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Germany.png`,
           excludePattern: "瓜德罗普"
         },
@@ -185,6 +185,11 @@ https://github.com/powerfullz/override-rules
           pattern: "俄罗斯|俄|\\b(?:RU|ru)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Russia|🇷🇺",
           icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Russia.png`,
           excludePattern: "埃塞俄比亚|白俄罗斯"
+        },
+        荷兰: {
+          weight: 75,
+          pattern: "荷兰|阿姆斯特丹|Amsterdam|\\b(?:NL|nl)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Netherlands|NETHERLANDS|Holland|AMS|🇳🇱",
+          icon: `${CDN_URL}/gh/Koolson/Qure@master/IconSet/Color/Netherlands.png`
         },
         泰国: {
           pattern: "泰国|泰|\\b(?:TH|th)(?:[-_ ]?\\d+(?:[-_ ]?[A-Za-z]{2,})?)?\\b|Thailand|🇹🇭",

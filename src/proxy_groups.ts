@@ -36,7 +36,7 @@ function buildGroupByType({
                 icon,
                 type: "url-test",
                 url: SPEEDTEST_URL,
-                interval: 60,
+                interval: 15,
                 tolerance: 20,
                 ...nodeSource,
             };
@@ -47,7 +47,7 @@ function buildGroupByType({
                 type: "load-balance",
                 strategy: "sticky-sessions",
                 url: SPEEDTEST_URL,
-                interval: 60,
+                interval: 15,
                 tolerance: 20,
                 ...nodeSource,
             };
@@ -272,7 +272,7 @@ export function buildProxyGroups({
             type: "url-test",
             url: SPEEDTEST_URL,
             proxies: defaultFallback,
-            interval: 60,
+            interval: 15,
             tolerance: 20,
         },
         {
@@ -281,7 +281,7 @@ export function buildProxyGroups({
             type: "fallback",
             url: SPEEDTEST_URL,
             proxies: defaultFallback,
-            interval: 60,
+            interval: 15,
             tolerance: 20,
         },
         lowCostNodes.length > 0 || regexFilter
